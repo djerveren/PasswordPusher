@@ -10,7 +10,7 @@ ENV DATABASE_URL=postgresql://passwordpusher_user:passwordpusher_passwd@postgres
 
 RUN ln -fs /usr/share/zoneinfo/Europe/Paris > /etc/localtime
 RUN apt-get update -qq && \
-    apt-get install -y --assume-yes build-essential libpq-dev git curl ruby2.7 ruby2.7-dev tzdata sqlite3 ruby-sqlite3 libsqlite3-dev zlib1g-dev nodejs yarnpkg && \
+    apt-get install -y --assume-yes build-essential libpq-dev git curl ruby2.7 ruby2.7-dev tzdata sqlite3 ruby-sqlite3 libsqlite3-dev zlib1g-dev nodejs yarnpkg shared-mime-info && \
     cd /opt && \
     git clone https://github.com/djerveren/PasswordPusher.git && \
     touch ${APP_ROOT}/log/production.log && \
