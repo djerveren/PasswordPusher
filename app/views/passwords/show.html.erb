@@ -8,17 +8,13 @@
 Copy to Clipboard
 </button>
 
-<p class='pwinstructions'>
-Please obtain and securely store this password elsewhere, ideally in a password manager.
-</p>
-
 <p>
 <% if @password.views_remaining == 0 %>
     This secret link will be deleted in <%=pluralize(@password.days_remaining, 'day')%>
      or 0 more views (this is the last view).
 <% else %>
-    This secret link will be deleted in <%=pluralize(@password.days_remaining, 'day')%>
-     or <%=pluralize(@password.views_remaining, 'more view')%> (whichever occurs first).
+    This secret link will be deleted in <span class='normal-yellow-font'><%=pluralize(@password.days_remaining, 'day')%></span>
+     or <span class='normal-yellow-font'><%=pluralize(@password.views_remaining, 'more view')%></span> (whichever occurs first).
 <% end %>
 </p>
 
