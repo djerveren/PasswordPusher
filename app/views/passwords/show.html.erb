@@ -10,8 +10,8 @@ Copy to Clipboard
 
 <p>
 <% if @password.views_remaining == 0 %>
-    This secret link will be deleted in <%=pluralize(@password.days_remaining, 'day')%>
-     or 0 more views (this is the last view).
+    This secret link will be deleted in <span class='normal-yellow-font'><%=pluralize(@password.days_remaining, 'day')%></span>
+     or <span class='normal-yellow-font'>0 more views</span> (this is the last view).
 <% else %>
     This secret link will be deleted in <span class='normal-yellow-font'><%=pluralize(@password.days_remaining, 'day')%></span>
      or <span class='normal-yellow-font'><%=pluralize(@password.views_remaining, 'more view')%></span> (whichever occurs first).
