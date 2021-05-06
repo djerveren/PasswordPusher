@@ -29,6 +29,7 @@ WORKDIR ${APP_ROOT}
 ENV RACK_ENV=production
 ENV RAILS_ENV=production
 ENV RAILS_SERVE_STATIC_FILES=true
+ENV RUBYOPT='-W:no-deprecated'
 RUN bundle config set without 'development private test'
 RUN bundle config set deployment 'true'
 
